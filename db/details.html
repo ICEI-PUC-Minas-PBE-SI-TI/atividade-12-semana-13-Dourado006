@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Projeto | Gearhead Project</title>
+    <link rel="icon" type="image/png" href="images/Icon.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container-fluid px-lg-5 d-flex flex-wrap justify-content-between align-items-center">
+            <div class="logo">
+                <h1>GEAR<span>HEADs</span></h1>
+            </div>
+            <nav class="top-nav d-none d-lg-block">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="cadastro_projetos.html">Cadastrar</a></li>
+                </ul>
+            </nav>
+            <a href="index.html" class="btn-voltar d-none d-lg-flex">
+                <i class="fas fa-arrow-left me-2"></i> Voltar
+            </a>
+        </div>
+    </header>
+
+    <div class="container-fluid px-lg-5 mt-4 mb-5">
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" id="breadcrumbTitle">Detalhes do Projeto</li>
+            </ol>
+        </nav>
+
+        <!-- Loading -->
+        <div id="loadingMsg" class="text-center py-5">
+            <div class="spinner-border text-warning" role="status"></div>
+            <p class="mt-3 text-muted">Carregando projeto...</p>
+        </div>
+
+        <!-- Erro -->
+        <div id="errorMsg" class="alert alert-danger d-none" role="alert">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            <span id="errorText">Erro ao carregar o projeto.</span>
+        </div>
+
+        <!-- Conteúdo de Detalhes -->
+        <div id="detailsContent" class="d-none">
+
+            <div class="row g-4">
+                <!-- Imagem Principal -->
+                <div class="col-12 col-lg-6">
+                    <div class="detail-img-wrapper">
+                        <img id="detalheImagem" src="" alt="" class="detail-main-img">
+                        <div id="detalheBadge" class="badge-tech-detail"></div>
+                    </div>
+                </div>
+
+                <!-- Informações Principais -->
+                <div class="col-12 col-lg-6">
+                    <div class="detail-info-box">
+                        <span id="detalheCategoria" class="card-categoria mb-2 d-inline-block"></span>
+                        <h1 id="detalheTitulo" class="detail-title"></h1>
+                        <p id="detalheDescricaoCurta" class="detail-short-desc"></p>
+
+                        <div class="detail-specs-grid mt-4">
+                            <div class="spec-item">
+                                <span class="spec-label"><i class="fas fa-bolt"></i> Potência</span>
+                                <span id="detalhePotencia" class="spec-value"></span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label"><i class="fas fa-cog"></i> Motor</span>
+                                <span id="detalheMotor" class="spec-value"></span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label"><i class="fas fa-user"></i> Dono / Prep.</span>
+                                <span id="detalheProprietario" class="spec-value"></span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label"><i class="fas fa-calendar"></i> Ano</span>
+                                <span id="detalheAno" class="spec-value"></span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label"><i class="fas fa-globe"></i> País</span>
+                                <span id="detalhePais" class="spec-value"></span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label"><i class="fas fa-dollar-sign"></i> Valor Est.</span>
+                                <span id="detalhePreco" class="spec-value highlight"></span>
+                            </div>
+                        </div>
+
+                        <div class="detail-actions mt-4">
+                            <a href="index.html" class="btn-action btn-action-outline">
+                                <i class="fas fa-arrow-left me-2"></i>Voltar
+                            </a>
+                            <button class="btn-action btn-action-primary" onclick="alert('Em breve!')">
+                                <i class="fas fa-heart me-2"></i>Favoritar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Descrição Completa -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="detail-section-box">
+                        <h2 class="detail-section-title"><i class="fas fa-file-alt me-2"></i>Sobre o Projeto</h2>
+                        <p id="detalheDescricaoCompleta" class="detail-full-desc"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="detail-section-box">
+                        <h2 class="detail-section-title"><i class="fas fa-tags me-2"></i>Tags</h2>
+                        <div id="detalheTags" class="tags-container"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container text-center">
+            <h5>REALIZAÇÃO</h5>
+            <p>Trabalho Prático - PUC Minas | Aluno: Victor Dourado</p>
+            <div class="social-links mt-3">
+                <a href="https://github.com/Dourado006" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/victor-dourado-792230355/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/victor.dourado.006/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-bottom mt-4">
+                <p>&copy; 2026 Gearhead Project | Dourado Company.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="details.js"></script>
+</body>
+</html>
