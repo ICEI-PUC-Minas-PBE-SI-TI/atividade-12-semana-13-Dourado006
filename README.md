@@ -44,5 +44,19 @@
       "destaque": true,
       "tags": ["6 Canecos", "Álcool", "Brasileiro", "Clássico", "Drag", "Cultura BR"]
     },
+<<<<<<< HEAD
 
 
+=======
+
+}
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/03fd1ef9-f157-4d84-870f-89aad64cc0d1" />
+
+
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/d5b8755c-89a0-48c1-973e-aa4336c556ca" />
+
+
+<img width="1911" height="1078" alt="image" src="https://github.com/user-attachments/assets/dbeaabb3-d40c-4088-bef0-8cf7be761a7f" />
+
+
+>>>>>>> 2c9114261a9f5e0d947cdbc4bf992f4bf5247a4e
